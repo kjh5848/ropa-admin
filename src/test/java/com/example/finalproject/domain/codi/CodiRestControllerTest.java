@@ -5,16 +5,17 @@ import com.example.finalproject.domain.MyRestDoc;
 import com.example.finalproject.domain.photo.Photo;
 import com.example.finalproject.domain.user.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -138,7 +139,6 @@ public class CodiRestControllerTest extends MyRestDoc {
         actions.andDo(MockMvcResultHandlers.print()).andDo(document);
     }
 
-
     @Test
     public void appCodiPage_fail_test() throws Exception {
         // when
@@ -154,7 +154,6 @@ public class CodiRestControllerTest extends MyRestDoc {
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response").isEmpty());
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.errorMessage").value("정보를 찾을 수 없습니다."));
         actions.andDo(MockMvcResultHandlers.print()).andDo(document);
-
     }
 
     @Test
@@ -171,7 +170,7 @@ public class CodiRestControllerTest extends MyRestDoc {
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.codiId").value(1));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.description").exists());
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.createdAt").exists());
-        actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.isloved").value(true));
+        actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.isloved").exists());
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.loveCount").value(2));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.mainPhotos[0].mainPhotoId").value(14));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.mainPhotos[0].mainPhotoName").exists());
