@@ -10,12 +10,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
+@ActiveProfiles("prod")
 @AutoConfigureMockMvc
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 public class CartRestControllerTest extends MyRestDoc {
@@ -31,7 +33,7 @@ public class CartRestControllerTest extends MyRestDoc {
                         .id(1)
                         .email("junghein@example.com")
                         .password("1234")
-                        .myName("junghein")
+                        .myName("정해인")
                         .build());
     }
 

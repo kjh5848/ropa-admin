@@ -27,8 +27,6 @@ public class UserRestController {
     }
 
 
-
-
     // 앱 프로필 화면
     @GetMapping("/app/profile")
     public ResponseEntity<?> profilePage() {

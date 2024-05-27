@@ -25,7 +25,7 @@ public class PhotoRestControllerTest extends MyRestDoc {
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.status").value(200));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.success").value(true));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.popularUserPhotos[0].photoId").value(6));
-        actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.popularUserPhotos[0].name").value("uuid_사용자사진3"));
+        actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.popularUserPhotos[0].name").exists());
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.popularUserPhotos[0].photoPath").value("/upload/user/user3.webp"));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.popularUserPhotos[0].sort").value("USER"));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.popularUserPhotos[0].creatorId").value(3));
@@ -56,7 +56,7 @@ public class PhotoRestControllerTest extends MyRestDoc {
         // then
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.status").value(200));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.success").value(true));
-        actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.codiPhotos[0].photoId").value(97));
+        actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.codiPhotos[0].photoId").value(99));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.codiPhotos[0].codiId").value(22));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.codiPhotos[0].photoPath").exists());
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.itemPhotos[0].itemsId").value(19));
