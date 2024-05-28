@@ -25,26 +25,23 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean build
 
-#
-#      - name: List files in current directory
-#        run: ls -al
-#
-#      - name: deploy packging
-#        run: |
-#          mkdir deploy
-#          cp build/libs/*.jar deploy/application.jar
-#          cp Procfile deploy/Procfile
-#          cp -r .ebextensions deploy/.ebextensions
-#          cp -r upload deploy/upload
-#          cd deploy && zip -r deploy.zip .
-#
-#      - name: Deploy to EB
-#        uses: einaregilsson/beanstalk-deploy@v22
-#        with:
-#          aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
-#          aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
-#          application_name: ropa
-#          environment_name: Ropa-env
-#          version_label: ${{ github.run_number }}
-#          region: ap-northeast-2
-#          deployment_package: deploy/deploy.zip
+      - name: deploy packging
+        run: |
+          mkdir deploy
+          cp build/libs/*.jar deploy/application.jar
+          cp Procfile deploy/Procfile
+          cp -r .ebextensions deploy/.ebextensions
+          cp -r upload deploy/upload
+          cd deploy && zip -r deploy.zip .
+
+      - name: Deploy to EB
+        uses: einaregilsson/beanstalk-deploy@v22
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
+          application_name: ropa
+          environment_name: Ropa-env
+          version_label: ${{ github.run_number }}
+          region: ap-northeast-2
+          deployment_package: deploy/deploy.zip
+
