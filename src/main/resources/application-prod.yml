@@ -28,7 +28,7 @@ logging:
   level:
     org.hibernate.orm.jdbc.bind: INFO
     shop.mtcoding.blog: INFO
-
-# 외부 이미지 폴더 경로 설정
-app:
-  upload-dir: ./upload
+#
+## 외부 이미지 폴더 경로 설정
+#app:
+#  upload-dir: ./upload
