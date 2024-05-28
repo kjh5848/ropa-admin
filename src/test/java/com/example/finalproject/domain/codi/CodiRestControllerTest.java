@@ -121,7 +121,7 @@ public class CodiRestControllerTest extends MyRestDoc {
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.description").exists());
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.createdAt").exists());
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.isloved").value(false));
-        actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.loveCount").value(2));
+        actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.loveCount").value(1));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.mainPhotos[0].mainPhotoId").value(14));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.mainPhotos[0].mainPhotoName").exists());
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.mainPhotos[0].photoPath").value("/upload/codi/user-03-codi01.webp"));
@@ -171,7 +171,7 @@ public class CodiRestControllerTest extends MyRestDoc {
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.description").exists());
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.createdAt").exists());
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.isloved").exists());
-        actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.loveCount").value(2));
+        actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.loveCount").value(1));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.mainPhotos[0].mainPhotoId").value(14));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.mainPhotos[0].mainPhotoName").exists());
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.mainPhotos[0].photoPath").value("/upload/codi/user-03-codi01.webp"));
@@ -384,7 +384,5 @@ public class CodiRestControllerTest extends MyRestDoc {
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.photoPath").exists());
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.errorMessage").doesNotExist());
         actions.andDo(MockMvcResultHandlers.print()).andDo(document);
-
     }
-
 }

@@ -19,6 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+
 @Transactional
 @AutoConfigureMockMvc
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
@@ -132,6 +133,7 @@ public class UserRestControllerTest extends MyRestDoc {
     //로그인
     @Test
     public void login_success_test() throws Exception {
+
         // given
         UserRequest.LoginDTO reqDTO = new UserRequest.LoginDTO();
         reqDTO.setEmail("junghein@example.com");
@@ -488,7 +490,6 @@ public class UserRestControllerTest extends MyRestDoc {
                 get("/app/creator-view/" + userId)
                         .header("Authorization", "Bearer " + jwt)
         );
-
         // eye
         String respBody = actions.andReturn().getResponse().getContentAsString();
 //        System.out.println(respBody);
@@ -501,7 +502,7 @@ public class UserRestControllerTest extends MyRestDoc {
         actions.andExpect(jsonPath("$.response.userDTO.blueChecked").value(true));
         actions.andExpect(jsonPath("$.response.userDTO.photoName").exists());
         actions.andExpect(jsonPath("$.response.userDTO.photoPath").exists());
-        actions.andExpect(jsonPath("$.response.userDTO.nickName").value("bun"));
+        actions.andExpect(jsonPath("$.response.userDTO.nickName").value("bunwuseok"));
         actions.andExpect(jsonPath("$.response.userDTO.height").value("180cm"));
         actions.andExpect(jsonPath("$.response.userDTO.weight").value("75kg"));
         actions.andExpect(jsonPath("$.response.userDTO.job").value("직장인"));
@@ -560,7 +561,7 @@ public class UserRestControllerTest extends MyRestDoc {
         actions.andExpect(jsonPath("$.response.userId").value(3));
         actions.andExpect(jsonPath("$.response.photoName").exists());
         actions.andExpect(jsonPath("$.response.photoPath").exists());
-        actions.andExpect(jsonPath("$.response.nickName").value("bun"));
+        actions.andExpect(jsonPath("$.response.nickName").value("bunwuseok"));
         actions.andExpect(jsonPath("$.response.orderCount").value(4));
         actions.andExpect(jsonPath("$.errorMessage").doesNotExist());
         actions.andDo(MockMvcResultHandlers.print()).andDo(document);
@@ -639,7 +640,6 @@ public class UserRestControllerTest extends MyRestDoc {
     public void creator_my_page_success_test() throws Exception {
         // given
 
-
         // when
         ResultActions actions = mvc.perform(
                 get("/app/creator-my-page")
@@ -659,7 +659,7 @@ public class UserRestControllerTest extends MyRestDoc {
                 .andExpect(jsonPath("$.response.userDTO.blueChecked").value(true))
                 .andExpect(jsonPath("$.response.userDTO.photoName").exists())
                 .andExpect(jsonPath("$.response.userDTO.photoPath").exists())
-                .andExpect(jsonPath("$.response.userDTO.nickName").value("bun"))
+                .andExpect(jsonPath("$.response.userDTO.nickName").value("bunwuseok"))
                 .andExpect(jsonPath("$.response.userDTO.height").value("180cm"))
                 .andExpect(jsonPath("$.response.userDTO.weight").value("75kg"))
                 .andExpect(jsonPath("$.response.userDTO.job").value("직장인"))

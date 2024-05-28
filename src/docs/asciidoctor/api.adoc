@@ -3,6 +3,7 @@
 
 ifndef::snippets[]
 :snippets: ./build/generated-snippets
+respBody = {"status":200,"success":true,"response":{"codiId":23,"userId":1,"photoId":99,"photoPath":"/upload/fa54809a-695e-4153-8711-367ef8adcc73_photo1.jpg"},"errorMessage":null}
 endif::[]
 
 

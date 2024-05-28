@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.transaction.annotation.Transactional;
@@ -56,7 +55,7 @@ public class CartRestControllerTest extends MyRestDoc {
         actions.andExpect(jsonPath("$.status").value(200));
         actions.andExpect(jsonPath("$.success").value(true));
         actions.andExpect(jsonPath("$.response.userId").value(1));
-//        actions.andExpect(jsonPath("$.response.cartList[0].cartId").value(1));
+        actions.andExpect(jsonPath("$.response.cartList[0].cartId").value(1));
         actions.andExpect(jsonPath("$.response.cartList[0].itemId").value(1));
         actions.andExpect(jsonPath("$.response.cartList[0].itemName").value("SCRAPPED 티셔츠(WHITE)"));
         actions.andExpect(jsonPath("$.response.cartList[0].photoPath").value("/upload/items/item01/mainItemPhoto.jpg"));
