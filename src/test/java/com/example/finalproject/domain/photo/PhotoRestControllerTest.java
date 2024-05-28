@@ -57,8 +57,8 @@ public class PhotoRestControllerTest extends MyRestDoc {
         // then
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.status").value(200));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.success").value(true));
-        actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.codiPhotos[0].photoId").value(14));
-        actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.codiPhotos[0].codiId").value(1));
+        actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.codiPhotos[0].photoId").value(97));
+        actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.codiPhotos[0].codiId").value(22));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.codiPhotos[0].photoPath").exists());
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.itemPhotos[0].itemsId").value(19));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.itemPhotos[0].itemName").value("[비침 X] 2TYPE 린넨 쿨링 밴딩 팬츠"));
@@ -68,7 +68,6 @@ public class PhotoRestControllerTest extends MyRestDoc {
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.response.itemPhotos[0].photoPath").value("/upload/items/item19/mainItemPhoto.jpg"));
         actions.andExpect(MockMvcResultMatchers.jsonPath("$.errorMessage").doesNotExist());
         actions.andDo(MockMvcResultHandlers.print()).andDo(document);
-
     }
 
 }
