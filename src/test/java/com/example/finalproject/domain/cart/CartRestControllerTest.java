@@ -17,7 +17,6 @@ import org.springframework.transaction.annotation.Transactional;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
-@Transactional
 @AutoConfigureMockMvc
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 public class CartRestControllerTest extends MyRestDoc {
