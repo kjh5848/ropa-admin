@@ -48,5 +48,4 @@ spring:
 logging:
   level:
     org.hibernate.orm.jdbc.bind: TRACE
-    shop.mtcoding.blog: DEBUG
-
+    com.example.finalproject: DEBUG

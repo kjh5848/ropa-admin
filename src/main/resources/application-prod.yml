@@ -26,8 +26,8 @@ spring:
 
 logging:
   level:
-    org.hibernate.orm.jdbc.bind: INFO
-    com.example.finalproject: INFO
+    org.hibernate.orm.jdbc.bind: DEBUG
+    com.example.finalproject: DEBUG
 
 ## 외부 이미지 폴더 경로 설정
 app:
