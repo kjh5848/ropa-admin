@@ -1,14 +1,14 @@
-name: ropa
+name: Deploy to Elastic Beanstalk
 on:
   push:
     branches:
       - master
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout source code
         uses: actions/checkout@v4
 
       - name: Set up JDK 21
@@ -17,22 +17,21 @@ jobs:
           java-version: 21
           distribution: 'temurin'
 
-      - name: Permission
+      - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
       - name: Build with Gradle
         run: ./gradlew clean build --stacktrace
 
-      - name: deploy packaging
+      - name: Prepare deployment package
         run: |
           mkdir deploy
           cp build/libs/*.jar deploy/application.jar
           cp Procfile deploy/Procfile
           cp -r .ebextensions deploy/.ebextensions
-          cp -r upload deploy/upload
           cd deploy && zip -r deploy.zip .
 
-      - name: Deploy to EB
+      - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v22
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
