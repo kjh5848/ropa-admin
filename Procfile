@@ -1,1 +1,1 @@
-web: /sbin/appstart
+springapp: appstart
