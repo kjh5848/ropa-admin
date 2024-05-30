@@ -47,6 +47,7 @@ public class MyExceptionHandler {
         ApiUtil<?> apiUtil = new ApiUtil<>(500, e.getMessage());
         return new ResponseEntity<>(apiUtil, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> unknown(Exception e, HttpServletRequest request){
         log.error("500 Error: {}, Request URI: {}", e.getMessage(), request.getRequestURI(), e);

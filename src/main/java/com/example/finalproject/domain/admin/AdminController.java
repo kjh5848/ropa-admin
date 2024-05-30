@@ -47,15 +47,15 @@ public class AdminController {
     }
 
     // 로그인 폼
-    @GetMapping({"/", "/login-form"})
+    @GetMapping("/")
     public String loginForm() {
-        return "/admin/login-form";
+        return "admin/login-form";
     }
 
     // 회원가입 폼
     @GetMapping("/join-form")
     public String joinForm() {
-        return "/admin/join-form";
+        return "admin/join-form";
     }
 
     // 회원정보 수정 폼 및 정보 확인
