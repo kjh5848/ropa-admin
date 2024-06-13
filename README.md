@@ -1,3 +1,6 @@
+
+
+
 # 🚀 "ROPA" - 2조 파이널 프로젝트
 
 
@@ -5,8 +8,58 @@
   <img src="https://github.com/chugue/ropa-admin/assets/30003848/70af4146-2333-412b-b2fd-8eb1be45f8e7"  style="width: 50%; height: auto;"/>
 </p>
 
+> # I am
+| 이름 | 사진 | 역할 |  
+|:--:|:--:|:---------------:|
+| 김주혁 | <img src="https://github.com/kjh5848/miniproject-jobala-v2-ssr/assets/153582123/01f59beb-1535-4356-9c39-c26c339390ac" width="200px"/> |마인드맵 설계<br>앱,SSR MOCK 디자인 구현<br>앱 UI 페이지 구현<br>로그인 인증체크<br>flutter 장바구니 삭제, 추가<br>flutter 코디 좋아요<br>flutter creator 권한체크<br>flutter 자동 로그인<br>|
+---
+<br/>
 
 
+# 👉 핵심 시나리오 시연
+### 🔹브랜드 아이템 등록
+
+![브랜드 아이템 등록](https://github.com/chugue/ropa-admin/assets/30003848/acd9e3df-5eee-44b7-b831-b508baeef10d)
+
+<br>
+
+### 🔹 목록 보기
+![홈 목록보기](https://github.com/chugue/ropa-admin/assets/30003848/dd09bfc5-c139-400c-a23e-13713717d937)
+
+<br>
+
+### 🔹 아이템 상세보기
+![녹화_2024_05_24_10_57_37_548](https://github.com/chugue/ropa-admin/assets/30003848/6ce1593a-a75f-40c7-87de-4216d558b71a)
+
+<br>
+
+### 🔹 장바구니 추가
+![녹화_2024_05_24_10_59_38_776](https://github.com/chugue/ropa-admin/assets/30003848/dcb75176-c179-43e4-9536-f1fdb0408040)
+
+<br>
+
+### 🔹 배송지 입력 / 결제
+![녹화_2024_05_24_11_01_15_270](https://github.com/chugue/ropa-admin/assets/30003848/6eacc1fe-a391-450d-8efd-3f30a64faa83)
+
+<br>
+
+### 🔹 크리에이터 지원하기 
+![녹화_2024_05_24_11_05_38_97](https://github.com/chugue/ropa-admin/assets/30003848/78555567-da40-4b26-a99a-66291fcc11d3)
+
+<br>
+
+### 🔹 크리에이터 승인하기
+![녹화_2024_05_24_11_09_41_220](https://github.com/chugue/ropa-admin/assets/30003848/f487a0fe-7ba2-4444-b6f4-915612222410)
+
+<br>
+
+### 🔹 크리에이터 코디 메인사진 등록하기
+![녹화_2024_05_24_11_11_54_847](https://github.com/chugue/ropa-admin/assets/30003848/a5a2596a-29bf-4d38-a36e-99c4a6a123cb)
+
+<br>
+
+### 🔹 크리에이터 코디에 아이템 연결하기
+![녹화_2024_05_24_11_12_24_872](https://github.com/chugue/ropa-admin/assets/30003848/71935699-78e8-4b78-a86e-4fe234dd5f20)
 <br>
 
 # 👉 코디 아이템 중개 플랫폼
@@ -173,57 +226,5 @@ dependencies {
 [팀 블로그 링크](https://www.notion.so/stephenkiim/23dafc6dac1649318bc1bc1ece61c2fd)
 
 <br>
-
-# 👉 핵심 시나리오 시연
-### 🔹브랜드 아이템 등록
-
-![브랜드 아이템 등록](https://github.com/chugue/ropa-admin/assets/30003848/acd9e3df-5eee-44b7-b831-b508baeef10d)
-
-<br>
-
-### 🔹 목록 보기
-![홈 목록보기](https://github.com/chugue/ropa-admin/assets/30003848/dd09bfc5-c139-400c-a23e-13713717d937)
-
-<br>
-
-### 🔹 아이템 상세보기
-![녹화_2024_05_24_10_57_37_548](https://github.com/chugue/ropa-admin/assets/30003848/6ce1593a-a75f-40c7-87de-4216d558b71a)
-
-<br>
-
-### 🔹 장바구니 추가
-![녹화_2024_05_24_10_59_38_776](https://github.com/chugue/ropa-admin/assets/30003848/dcb75176-c179-43e4-9536-f1fdb0408040)
-
-<br>
-
-### 🔹 배송지 입력 / 결제
-![녹화_2024_05_24_11_01_15_270](https://github.com/chugue/ropa-admin/assets/30003848/6eacc1fe-a391-450d-8efd-3f30a64faa83)
-
-<br>
-
-### 🔹 크리에이터 지원하기 
-![녹화_2024_05_24_11_05_38_97](https://github.com/chugue/ropa-admin/assets/30003848/78555567-da40-4b26-a99a-66291fcc11d3)
-
-<br>
-
-### 🔹 크리에이터 승인하기
-![녹화_2024_05_24_11_09_41_220](https://github.com/chugue/ropa-admin/assets/30003848/f487a0fe-7ba2-4444-b6f4-915612222410)
-
-<br>
-
-### 🔹 크리에이터 코디 메인사진 등록하기
-![녹화_2024_05_24_11_11_54_847](https://github.com/chugue/ropa-admin/assets/30003848/a5a2596a-29bf-4d38-a36e-99c4a6a123cb)
-
-<br>
-
-### 🔹 크리에이터 코디에 아이템 연결하기
-![녹화_2024_05_24_11_12_24_872](https://github.com/chugue/ropa-admin/assets/30003848/71935699-78e8-4b78-a86e-4fe234dd5f20)
-
-
-  
-
-
-
-
 
 
